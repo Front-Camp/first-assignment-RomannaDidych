@@ -10,7 +10,13 @@
 * sum(-1, 13); // 12
 */
 const sum = (a, b) => {
-  /* your logic here...*/
+  if(a === undefined || typeof(a) !== 'number' || !isFinite(a))
+  	throw("Value a is invalid");
+
+  if (b === undefined || typeof(b) !== 'number' || !isFinite(b))
+  	throw("Value b is invalid");
+
+  return a + b;
 };
 
 export default sum;

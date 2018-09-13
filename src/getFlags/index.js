@@ -6,7 +6,15 @@
  * getFlags(arr); // [1, 2, 3, 4, 5, 6]
  */
 const getFlags = arr => {
-  /* your logic here...*/
+  var result = []
+
+  for(var i = 0; i < arr.length;i++){
+  	if("flags" in arr[i] && Array.isArray(arr[i].flags)){
+  		for(var j = 0; j < arr[i].flags.length; ++j)
+  			result.push(arr[i].flags[j]);
+  	}
+  }
+  return result;
 };
 
 export default getFlags;
